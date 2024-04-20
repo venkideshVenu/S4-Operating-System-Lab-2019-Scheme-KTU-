@@ -49,6 +49,7 @@ int main()
     
     Key of Shared Memory is : 2
     Process Attached is : 0x7f1780c25000
-    Data Read from Memeory : 8 5
+    Enter the Data to be Writter : 8 5
+    Written Data is : 8  5
 
 */
