@@ -5,10 +5,6 @@
 #include <stdio.h>
 
 int nop, nob, i, j;
-// Array to store the remaining size of each block after allocation
-int rem[10];
-// Array to store the allocated block number for each process
-int alloc[10];
 
 // Structure to represent memory block
 struct memory
