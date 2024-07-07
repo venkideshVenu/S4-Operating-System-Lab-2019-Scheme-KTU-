@@ -19,7 +19,7 @@ void sort(int T)
     {
         for (j = 0; j < n - i - 1; j++) 
         {
-            if ((T == 1 && pro[j].ATC > pro[j + 1].ATC) || (T == 2 && pro[j].num < pro[j + 1].num)) {
+            if ((T == 1 && pro[j].ATC > pro[j + 1].ATC) || (T == 2 && pro[j].num > pro[j + 1].num)) {
                 temp = pro[j];
                 pro[j] = pro[j+1];
                 pro[j+1] = temp;
@@ -116,33 +116,31 @@ int main() {
                 Output
 
 
-    Enter the Number of Process : 6
-    Enter the Time Quantum :  5
-    Enter Process 1 - Arrival Time and Burst Time : 0 7
-    Enter Process 2 - Arrival Time and Burst Time : 1 4
-    Enter Process 3 - Arrival Time and Burst Time : 2 15
-    Enter Process 4 - Arrival Time and Burst Time : 3 11
-    Enter Process 5 - Arrival Time and Burst Time : 4 20
-    Enter Process 6 - Arrival Time and Burst Time : 4 9
+            Enter the Number of Processes: 6
+            Enter the Time Quantum: 5
+            Enter Process 1 - Arrival Time and Burst Time : 0 7
+            Enter Process 2 - Arrival Time and Burst Time : 1 4
+            Enter Process 3 - Arrival Time and Burst Time : 2 15
+            Enter Process 4 - Arrival Time and Burst Time : 3 11
+            Enter Process 5 - Arrival Time and Burst Time : 4 20
+            Enter Process 6 - Arrival Time and Burst Time : 4 9
 
 
-      Gantt Chart
-    ------------------------------------------------------------------------ 
-    |   P1  |   P2  |   P3  |   P4  |   P5  |   P6  |   P1  |   P3  |   P4  |   P5  |   P6  |   P3  |   P4  |   P5  |   P5   |
-    ------------------------------------------------------------------------
-    0       5       9       14      19      24      29      31      36      41      46      50      55      56      61       66
+              Gantt Chart
+            ------------------------------------------------------------------------
+            |   P1  |   P2  |   P3  |   P4  |   P5  |   P6  |   P1  |   P3  |   P4  |   P5  |   P6  |   P3  |   P4  |   P5  |   P5   |
+            ------------------------------------------------------------------------
+            0       5       9       14      19      24      29      31      36      41      46      50      55      56      61      66
+                     Process         Arrival           Burst      Completion      TurnAround         Waiting
+            -------------------------------------------------------------------------------------------------
+                          1               0               7              31              31              24
+                          2               1               4               9               8               4
+                          3               2              15              55              53              38
+                          4               3              11              56              53              42
+                          5               4              20              66              62              42
+                          6               4               9              50              46              37
 
-             Process         Arrival           Burst      Completion      TurnAround         Waiting
-    -------------------------------------------------------------------------------------------------
-                  6               4               9              50              46              37
-                  5               4              20              66              62              42
-                  4               3              11              56              53              42
-                  3               2              15              55              53              38
-                  2               1               4               9               8               4
-                  1               0               7              31              31              24
-
-      Average Waiting Time       : 31.17 ms
-      Average TurnAround Time    : 42.17 ms
-
+              Average Waiting Time       : 31.17 ms
+              Average TurnAround Time    : 42.17 ms
 
 */
