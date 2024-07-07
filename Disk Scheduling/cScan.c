@@ -105,35 +105,35 @@ int main() {
 
 /*
 
-            Output 1
+                            Output 1
 
 
-    Enter the Number of Cylinders: 200
-    Enter the Previous Head Position: 45
-    Enter the Current Position: 50
-    Enter the Queue Size: 7
-    Enter the Requests in Order: 82 170 43 140 24 16 190
+                    Enter the Number of Cylinders: 200
+                    Enter the Previous Head Position: 45
+                    Enter the Current Position: 50
+                    Enter the Queue Size: 7
+                    Enter the Requests in Order: 82 170 43 140 24 16 190
 
-    Scanning Towards Right... Then Towards Left...
+                    Scanning Towards Right... Then Towards Left...
 
-    50-->82-->140-->170-->190-->199 -->0 -->16 -->24 -->43 -->
-    Total Seek Time    : 391
-    Average Seek Time  : 55.86
+                    50-->82-->140-->170-->190-->199 -->0 -->16 -->24 -->43 -->
+                    Total Seek Time    : 391
+                    Average Seek Time  : 55.86
 
 
 
-            Output 2
+                            Output 2
 
-    Enter the Number of Cylinders: 200
-    Enter the Previous Head Position: 65
-    Enter the Current Position: 50
-    Enter the Queue Size: 7
-    Enter the Requests in Order: 82 170 43 140 24 16 190
+                    Enter the Number of Cylinders: 200
+                    Enter the Previous Head Position: 65
+                    Enter the Current Position: 50
+                    Enter the Queue Size: 7
+                    Enter the Requests in Order: 82 170 43 140 24 16 190
 
-    Scanning Towards Left...  Then Towards Right...
-    50-->43-->24-->16-->0 -->199 -->190 -->170 -->140 -->82 -->
-    Total Seek Time    : 366
-    Average Seek Time  : 52.29
+                    Scanning Towards Left...  Then Towards Right...
+                    50-->43-->24-->16-->0 -->199 -->190 -->170 -->140 -->82 -->
+                    Total Seek Time    : 366
+                    Average Seek Time  : 52.29
 
 
 */

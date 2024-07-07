@@ -40,7 +40,7 @@ int main() {
 
     // Find the position in the sorted array where the current position resides
     for (i = 0; i <= queSize; i++) {
-        if (requests[i] >= currPos) {
+        if (requests[i] == currPos) {
             ptr = i;
             break;
         }
@@ -61,12 +61,14 @@ int main() {
         seek += abs(currPos - (cySize - 1));
         currPos = (cySize - 1);
         printf("%d -->", currPos);
+        
         for (i = ptr - 1; i >= 0; i--) {
             printf("%d -->", requests[i]);
             seek += abs(currPos - requests[i]);
             currPos = requests[i];
         } 
-    } else {
+    } 
+    else {
         // Scan towards left, then towards right
         printf("\nScanning Towards Left...  Then Towards Right...\n");
         for (i = ptr; i >= 0 ; i--) {
@@ -98,35 +100,36 @@ int main() {
 
 /*
 
-            Output 1
+                            Output 1
 
 
-    Enter the Number of Cylinders: 200
-    Cylinders are From 0 to 199.
-    Enter the Previous Head Position: 65
-    Enter the Current Position: 50
-    Enter the Queue Size: 7
-    Enter the Requests in Order: 82 170 43 140 24 16 190
+                Enter the Number of Cylinders: 200
+                Cylinders are From 0 to 199.
+                Enter the Previous Head Position: 65
+                Enter the Current Position: 50
+                Enter the Queue Size: 7
+                Enter the Requests in Order: 82 170 43 140 24 16 190
 
-    Scanning Towards Left...  Then Towards Right...
-    50-->43-->24-->16-->0 -->82 -->140 -->170 -->190 -->
-    Total Seek Time    : 240
-    Average Seek Time  : 34.29
-
-            Output 2
+                Scanning Towards Left...  Then Towards Right...
+                50-->43-->24-->16-->0 -->82 -->140 -->170 -->190 -->
+                Total Seek Time    : 240
+                Average Seek Time  : 34.29
 
 
-    Enter the Number of Cylinders: 200
-    Cylinders are From 0 to 199.
-    Enter the Previous Head Position: 45
-    Enter the Current Position: 50
-    Enter the Queue Size: 7
-    Enter the Requests in Order: 82 170 43 140 24 16 190
 
-    Scanning Towards Right... Then Towards Left...
-    50-->82-->140-->170-->190-->199 -->43 -->24 -->16 -->
-    Total Seek Time    : 332
-    Average Seek Time  : 47.43
+                            Output 2
+
+                Enter the Number of Cylinders: 200
+                Cylinders are From 0 to 199.
+                Enter the Previous Head Position: 45
+                Enter the Current Position: 50
+                Enter the Queue Size: 7
+                Enter the Requests in Order: 82 170 43 140 24 16 190
+
+                Scanning Towards Right... Then Towards Left...
+                50-->82-->140-->170-->190-->199 -->43 -->24 -->16 -->
+                Total Seek Time    : 332
+                Average Seek Time  : 47.43
 
 
 */
