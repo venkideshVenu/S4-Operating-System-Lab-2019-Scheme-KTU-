@@ -1,7 +1,6 @@
 
 
 #include <stdio.h>
-#include <stdlib.h>
 
 // Structure to represent a page entry
 struct  pageEntry{
@@ -86,11 +85,9 @@ int main() {
 
 /*
 
-                 Output
 
-/*
 
-                 Output
+Output
 
 
                 Ref String      Page Number             Status
