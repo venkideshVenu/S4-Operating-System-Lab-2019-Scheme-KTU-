@@ -19,7 +19,7 @@ void sort(int T)
     {
         for (j = 0; j < n - i - 1; j++) 
         {
-            if ((T == 1 && pro[j].ATC > pro[j + 1].ATC) || (T == 2 && pro[j].num > pro[j + 1].num)) {
+            if ((T == 1 && pro[j].ATC >= pro[j + 1].ATC) || (T == 2 && pro[j].num > pro[j + 1].num)) {
                 temp = pro[j];
                 pro[j] = pro[j+1];
                 pro[j+1] = temp;
@@ -94,7 +94,7 @@ int main() {
         printf("%d\t", noarr[i]);
 
     // Print process details
-    printf("\n %15s %15s %15s %15s %15s %15s", "Process", "Arrival", "Burst", "Completion", "TurnAround", "Waiting");
+    printf("\n\n %15s %15s %15s %15s %15s %15s", "Process", "Arrival", "Burst", "Completion", "TurnAround", "Waiting");
     printf("\n-------------------------------------------------------------------------------------------------");
     for (int i = 0; i < n; i++) {
         printf("\n%15d %15d %15d %15d %15d %15d", pro[i].num, pro[i].AT, pro[i].BT, pro[i].CT, pro[i].TAT, pro[i].WT);
@@ -109,38 +109,126 @@ int main() {
 
 
 
-
-
 /*
 
-                Output
 
+OUTPUT 1
 
-            Enter the Number of Processes: 6
-            Enter the Time Quantum: 5
-            Enter Process 1 - Arrival Time and Burst Time : 0 7
-            Enter Process 2 - Arrival Time and Burst Time : 1 4
-            Enter Process 3 - Arrival Time and Burst Time : 2 15
-            Enter Process 4 - Arrival Time and Burst Time : 3 11
-            Enter Process 5 - Arrival Time and Burst Time : 4 20
-            Enter Process 6 - Arrival Time and Burst Time : 4 9
+            Enter the Number of Processes: 5
+            Enter the Time Quantum: 15
+            Enter Process 1 - Arrival Time and Burst Time : 0 75
+            Enter Process 2 - Arrival Time and Burst Time : 10 40
+            Enter Process 3 - Arrival Time and Burst Time : 10 25
+            Enter Process 4 - Arrival Time and Burst Time : 55 30
+            Enter Process 5 - Arrival Time and Burst Time : 95 45
 
 
               Gantt Chart
             ------------------------------------------------------------------------
-            |   P1  |   P2  |   P3  |   P4  |   P5  |   P6  |   P1  |   P3  |   P4  |   P5  |   P6  |   P3  |   P4  |   P5  |   P5   |
+            |   P1  |   P2  |   P3  |   P1  |   P2  |   P3  |   P4  |   P1  |   P2  |   P5  |   P4  |   P1  |   P5  |   P1  |   P5   |
             ------------------------------------------------------------------------
-            0       5       9       14      19      24      29      31      36      41      46      50      55      56      61      66
+            0       15      30      45      60      75      85      100     115     125     140     155     170     185     200     215
+
+
                      Process         Arrival           Burst      Completion      TurnAround         Waiting
             -------------------------------------------------------------------------------------------------
-                          1               0               7              31              31              24
-                          2               1               4               9               8               4
-                          3               2              15              55              53              38
-                          4               3              11              56              53              42
-                          5               4              20              66              62              42
-                          6               4               9              50              46              37
+                          1               0              75             200             200             125
+                          2              10              40             125             115              75
+                          3              10              25              85              75              50
+                          4              55              30             155             100              70
+                          5              95              45             215             120              75
 
-              Average Waiting Time       : 31.17 ms
-              Average TurnAround Time    : 42.17 ms
+              Average Waiting Time       : 79.00 ms
+              Average TurnAround Time    : 122.00 ms
 
+                                    
+
+OUTPUT 2
+
+            Enter the Number of Processes: 5
+            Enter the Time Quantum: 3
+            Enter Process 1 - Arrival Time and Burst Time : 0 8
+            Enter Process 2 - Arrival Time and Burst Time : 5 2
+            Enter Process 3 - Arrival Time and Burst Time : 1 7
+            Enter Process 4 - Arrival Time and Burst Time : 6 3
+            Enter Process 5 - Arrival Time and Burst Time : 8 5
+
+
+              Gantt Chart
+            ------------------------------------------------------------------------
+            |   P1  |   P3  |   P1  |   P2  |   P4  |   P3  |   P5  |   P1  |   P3  |   P5   |
+            ------------------------------------------------------------------------
+            0       3       6       9       11      14      17      20      22      23      25
+
+                     Process         Arrival           Burst      Completion      TurnAround         Waiting
+            -------------------------------------------------------------------------------------------------
+                          1               0               8              22              22              14
+                          2               5               2              11               6               4
+                          3               1               7              23              22              15
+                          4               6               3              14               8               5
+                          5               8               5              25              17              12
+
+              Average Waiting Time       : 10.00 ms
+              Average TurnAround Time    : 15.00 ms
+
+
+
+OUTPUT 3
+
+
+            Enter the Number of Processes: 5
+            Enter the Time Quantum: 4
+            Enter Process 1 - Arrival Time and Burst Time : 0 11
+            Enter Process 2 - Arrival Time and Burst Time : 5 13
+            Enter Process 3 - Arrival Time and Burst Time : 9 6
+            Enter Process 4 - Arrival Time and Burst Time : 13 9
+            Enter Process 5 - Arrival Time and Burst Time : 17 12
+
+
+              Gantt Chart
+            ------------------------------------------------------------------------
+            |   P1  |   P1  |   P2  |   P1  |   P3  |   P2  |   P4  |   P5  |   P3  |   P2  |   P4  |   P5  |   P2  |   P4  |   P5   |
+            ------------------------------------------------------------------------
+            0       4       8       12      15      19      23      27      31      33      37      41      45      46      47      51
+
+
+                     Process         Arrival           Burst      Completion      TurnAround         Waiting
+            -------------------------------------------------------------------------------------------------
+                          1               0              11              15              15               4
+                          2               5              13              46              41              28
+                          3               9               6              33              24              18
+                          4              13               9              47              34              25
+                          5              17              12              51              34              22
+
+              Average Waiting Time       : 19.40 ms
+              Average TurnAround Time    : 29.60 ms
+
+
+OUTPUT 4
+
+            Enter the Number of Processes: 5
+            Enter the Time Quantum: 4
+            Enter Process 1 - Arrival Time and Burst Time : 0 10
+            Enter Process 2 - Arrival Time and Burst Time : 2 6
+            Enter Process 3 - Arrival Time and Burst Time : 3 4
+            Enter Process 4 - Arrival Time and Burst Time : 6 2
+            Enter Process 5 - Arrival Time and Burst Time : 10 8
+
+
+              Gantt Chart
+            ------------------------------------------------------------------------
+            |   P1  |   P2  |   P3  |   P1  |   P4  |   P2  |   P5  |   P1  |   P5   |
+            ------------------------------------------------------------------------
+            0       4       8       12      16      18      20      24      26      30
+
+                     Process         Arrival           Burst      Completion      TurnAround         Waiting
+            -------------------------------------------------------------------------------------------------
+                          1               0              10              26              26              16
+                          2               2               6              20              18              12
+                          3               3               4              12               9               5
+                          4               6               2              18              12              10
+                          5              10               8              30              20              12
+
+              Average Waiting Time       : 11.00 ms
+              Average TurnAround Time    : 17.00 ms
 */
