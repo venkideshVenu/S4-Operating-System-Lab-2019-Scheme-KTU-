@@ -5,7 +5,7 @@
 
 # Read the array size
 echo -n "Enter the number of Elements: "
-read n
+read n 
 
 # Read the array elements
 echo "Enter the Array Elements : "
