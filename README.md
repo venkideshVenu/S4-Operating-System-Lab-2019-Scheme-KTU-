@@ -79,7 +79,7 @@ This repository is a part of the S4 curriculum for Computer Science and Engineer
  
  12. **Experiment 12:** Disk Scheduling Algorithms 
    - Simulate disk scheduling algorithms.
-   - [Code](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/blob/main/bankersAlgorithm.c)
+   - [Code](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/tree/main/Disk%20Scheduling)
  
  
 
@@ -92,13 +92,9 @@ git clone https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-K
 
 Navigate to the directory of the experiment you want to work on and follow the instructions provided in the respective folder.
 
-## License
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contribution
 Contributions are welcome! If you have any suggestions or improvements, feel free to fork the repository and submit a pull request.
 
-## Contact
-If you have any questions or need further assistance, please feel free to open an issue in the repository.
-
---
+## License
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
