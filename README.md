@@ -26,8 +26,8 @@ This repository is a part of the S4 curriculum for Computer Science and Engineer
 
 ## Study Materials
 
-  > [Lab Manual](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/blob/main/Lab%20Manual.pdf)
-  > [Viva Questions](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/blob/main/Viva%20Questions.pdf)
+  - [Lab Manual](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/blob/main/Lab%20Manual.pdf)
+  - [Viva Questions](https://github.com/venkideshVenu/S4-Operating-System-Lab-2019-Scheme-KTU-/blob/main/Viva%20Questions.pdf)
 
 ## List of Experiments
 
